@@ -17,7 +17,7 @@ def main():
         page = requests.get('https://www.experfy.com'+pracAreaslinks[i])
         tree = html.fromstring(page.content)
         caseStudy = tree.xpath('//a[@data-mixpanel-event="View Case Study"]/./@data-mixpanel-name')
-        print pracAreas[i] + " - " + ", ".join(caseStudy)
+        print(pracAreas[i] + " - " + ", ".join(caseStudy))
 #     pracAreas = pracAreas.remove("")
     #This will create a list of prices
 #     print 'PA: ', ", ".join(pracAreas)
